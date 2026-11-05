@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loja Virtual — Painel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🛒 Loja Virtual — Painel</h1>
+    <p>Frontend da avaliação • Backend 2DAT2</p>
+  </header>
+
+  <main>
+    <section class="config">
+      <label>URL da API
+        <input id="apiUrl" type="text" value="http://localhost:3000" />
+      </label>
+      <button id="salvarUrl">Conectar</button>
+      <span id="status" class="status"></span>
+    </section>
+
+    <section class="form card">
+      <h2 id="formTitulo">Novo produto</h2>
+      <input type="hidden" id="editId" />
+      <div class="grid">
+        <label>Nome <input id="nome" type="text" placeholder="ex: Fone Bluetooth" /></label>
+        <label>Preço (R$) <input id="preco" type="text" placeholder="ex: 149.90" /></label>
+        <label>Estoque <input id="estoque" type="text" placeholder="ex: 10" /></label>
+        <label>Categoria
+          <select id="categoriaId"></select>
+        </label>
+      </div>
+      <div class="acoes">
+        <button id="salvarProduto">Adicionar</button>
+        <button id="cancelar" class="ghost" hidden>Cancelar</button>
+      </div>
+      <p id="formErro" class="erro"></p>
+    </section>
+
+    <section class="toolbar">
+      <select id="filtroCategoria"><option value="">Todas as categorias</option></select>
+      <select id="ordenar">
+        <option value="">Ordenar por…</option>
+        <option value="preco">Preço</option>
+        <option value="nome">Nome</option>
+        <option value="estoque">Estoque</option>
+      </select>
+      <button id="recarregar" class="ghost">Recarregar</button>
+    </section>
+
+    <ul id="lista" class="lista"></ul>
+    <p id="vazio" class="vazio"></p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

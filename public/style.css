@@ -1,0 +1,32 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, Arial, sans-serif; background: #0f1b2d; color: #eaf0f6; padding: 22px; }
+header { text-align: center; margin-bottom: 18px; }
+header h1 { color: #fff; font-size: 26px; }
+header p { color: #9fb0c3; font-size: 13px; }
+main { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+.card, .config, .toolbar { background: #16263d; border: 1px solid #2a3a52; border-radius: 12px; padding: 16px; }
+.config { display: flex; gap: 10px; align-items: flex-end; flex-wrap: wrap; }
+label { display: flex; flex-direction: column; gap: 6px; font-size: 13px; color: #9fb0c3; }
+input, select { padding: 10px 12px; border-radius: 8px; border: 1px solid #2a3a52; background: #0f1b2d; color: #eaf0f6; font-size: 14px; }
+.config label { flex: 1; min-width: 200px; }
+h2 { font-size: 17px; margin-bottom: 12px; color: #fff; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.acoes { display: flex; gap: 10px; margin-top: 14px; }
+button { padding: 10px 16px; border: none; border-radius: 8px; background: #2f6df6; color: #fff; font-size: 14px; font-weight: 700; cursor: pointer; }
+button:hover { background: #255ad1; }
+button.ghost { background: transparent; border: 1px solid #2a3a52; color: #9fb0c3; }
+.toolbar { display: flex; gap: 10px; flex-wrap: wrap; }
+.toolbar select { flex: 1; min-width: 150px; }
+.status { font-size: 13px; font-weight: 700; }
+.status.ok { color: #6fd3b6; } .status.off { color: #ff8a8a; }
+.erro { color: #ff8a8a; font-size: 13px; margin-top: 8px; min-height: 16px; }
+.lista { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.item { background: #16263d; border: 1px solid #2a3a52; border-radius: 10px; padding: 14px 16px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.item .nome { font-weight: 700; font-size: 16px; }
+.item .meta { color: #9fb0c3; font-size: 13px; margin-top: 3px; }
+.item .preco { color: #6fd3b6; font-weight: 700; }
+.item .btns { display: flex; gap: 8px; }
+.item .btns button { padding: 7px 12px; font-size: 13px; }
+.item .btns .del { background: #7a2230; }
+.vazio { text-align: center; color: #9fb0c3; font-size: 14px; }
+@media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
